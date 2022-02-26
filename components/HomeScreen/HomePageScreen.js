@@ -1,18 +1,22 @@
 import React from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import tw from "tailwind-react-native-classnames";
-export default function VideoScreen({
+export default function HomePageScreen({
   image,
   title,
   logo,
   channelName,
   views,
   uploadedTime,
+  navigation,
 }) {
   return (
-    <View>
-      <TouchableOpacity activeOpacity={0.8}>
-        <View style={tw`items-center justify-center`}>
+    <View style={{ width: "100%" }}>
+      <TouchableOpacity
+        activeOpacity={0.8}
+        onPress={() => navigation.navigate("VideoPlayScreen")}
+      >
+        <View style={tw`items-center justify-center w-full `}>
           {/* Image */}
           <Image
             resizeMode="contain"
@@ -42,7 +46,7 @@ export default function VideoScreen({
         />
 
         {/* Video title */}
-        <Text style={tw`ml-2 text-lg text-gray-100 flex-wrap w-10/12`}>
+        <Text style={tw`ml-2 text-sm text-gray-100 flex-wrap w-10/12`}>
           {title}
         </Text>
       </View>
@@ -62,7 +66,7 @@ const styles = StyleSheet.create({
   image: {
     width: "100%",
     height: 250,
-    borderRadius: 10,
+    // borderRadius: 10,
   },
   logo: {
     width: 40,

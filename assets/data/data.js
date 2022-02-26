@@ -34,6 +34,41 @@ const videoData = [
       "https://i.ytimg.com/vi/Y_KwHw8ZM4A/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARefYXiIy_KMZ5xRzyJlC_xja4eQ",
     logo: "https://yt3.ggpht.com/ytc/AKedOLRvBDE7oFIPE5ppfvKEulIVZtoC6eFD57aNGJUySfc=s68-c-k-c0x00ffffff-no-rj",
   },
+  {
+    title: "Why Does This Coding Platform Exist",
+    name: "Nick White",
+    views: "1.3k",
+    uploadedTime: "1 day  ago",
+    image:
+      "https://i.ytimg.com/vi/365Spu7C6_4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBz6yR-EhNlqXxkiH-9Y4bqdgCIQA",
+    logo: "https://yt3.ggpht.com/0B67SieAFdmemnoCm-AlJ80ZDGgIUA2dBo1KwwzFfXONnXT0oFPNKD11fT72LMXiqeWdKDSAVw=s88-c-k-c0x00ffffff-no-rj",
+  },
+  {
+    title: "Ambani Lost Everything! NOW POOR | Tamil | Madan Gowri | MG",
+    name: "Madan Gowri",
+    views: "400k",
+    uploadedTime: "5 hours ago",
+    image:
+      "https://i.ytimg.com/vi/Y_KwHw8ZM4A/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARefYXiIy_KMZ5xRzyJlC_xja4eQ",
+    logo: "https://yt3.ggpht.com/ytc/AKedOLRvBDE7oFIPE5ppfvKEulIVZtoC6eFD57aNGJUySfc=s68-c-k-c0x00ffffff-no-rj",
+  },
+  {
+    title: "Why Does This Coding Platform Exist",
+    name: "Nick White",
+    views: "1.3k",
+    uploadedTime: "1 day  ago",
+    image:
+      "https://i.ytimg.com/vi/365Spu7C6_4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBz6yR-EhNlqXxkiH-9Y4bqdgCIQA",
+    logo: "https://yt3.ggpht.com/0B67SieAFdmemnoCm-AlJ80ZDGgIUA2dBo1KwwzFfXONnXT0oFPNKD11fT72LMXiqeWdKDSAVw=s88-c-k-c0x00ffffff-no-rj",
+  },
 ];
 
-export default videoData;
+const recommendation = [
+  "All",
+  "Java Script",
+  "Python",
+  "computer programming ",
+  "comeday",
+  "Marvel cinematic universe",
+];
+export { videoData, recommendation };

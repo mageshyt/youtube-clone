@@ -1,13 +1,21 @@
 import React from "react";
-import { View, Text, SafeAreaView, Platform, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  Platform,
+  ScrollView,
+  StyleSheet,
+} from "react-native";
 import { Divider } from "react-native-elements";
-import videoData from "../assets/data/data";
+import { videoData } from "../assets/data/data";
 
 import HeaderTab from "../components/HomeScreen/HeaderTab";
-import VideoPlayScreen from "../components/HomeScreen/VideoPlayScreen";
-import VideoScreen from "../components/HomeScreen/VideoScreen";
 
-export default function Home() {
+import HomePageScreen from "../components/HomeScreen/HomePageScreen";
+import RecommendationTab from "../components/HomeScreen/RecommendationTab";
+
+export default function Home({ navigation }) {
   return (
     <View style={{ backgroundColor: "#121212" }}>
       <SafeAreaView>
@@ -15,11 +23,21 @@ export default function Home() {
           <HeaderTab />
         </View>
       </SafeAreaView>
+
       <Divider width={0.6} />
-      <ScrollView>
+      <RecommendationTab />
+      <Divider width={0.6} />
+      {/* Home Screen */}
+
+      <ScrollView
+        contentInset={{ bottom: 90 }}
+        contentContainerStyle={styles.contentContainer}
+        showsVerticalScrollIndicator={false}
+      >
         {videoData.map((item, index) => (
           <View key={index}>
-            <VideoScreen
+            <HomePageScreen
+              navigation={navigation}
               title={item.title}
               image={item.image}
               views={item.views}
@@ -30,11 +48,11 @@ export default function Home() {
           </View>
         ))}
       </ScrollView>
-      {/* <VideoPlayScreen
-        title={videoData[0].title}
-        views={videoData[0].views}
-        uploadedTime={videoData[0].uploadedTime}
-      /> */}
     </View>
   );
 }
+const styles = StyleSheet.create({
+  contentContainer: {
+    paddingBottom: 80,
+  },
+});
