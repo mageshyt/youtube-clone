@@ -13,7 +13,7 @@ export default function App() {
   );
 }
 
-const API_KEY = "AIzaSyCy0mvusZl2MVhyNOsaVGyQ75Eg1ajqecA";
+const API_KEY = process.env.API_KEY;
 const YOUTUBE_PLAYLIST_ITEMS_API =
   "https://www.googleapis.com/youtube/v3/playlistItems";
 
